@@ -5,16 +5,18 @@ import Spells from './Spells/Spells.js';
 import Houses from './Houses/Houses.js';
 import Characters from './Characters/Characters.js';
 import SortingHat from './SortingHat/SortingHat.js';
-
-
-import logo from './logo.svg';
+import axios from 'axios'
 import './App.css';
 
+const House_URL = 'https://www.potterapi.com/v1/'
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentView: 'Welcome'
+      currentView: 'Welcome',
+      nameInput: '',
+      houses: '',
+      characters: ''
     }
     this.setView = this.setView.bind(this)
   }
@@ -25,7 +27,9 @@ class App extends Component {
       case 'sortinghat':
         return <SortingHat/>
       case 'houses':
-        return <Houses />
+        return <Houses
+          houses = {this.state.houses}
+         />
       case 'characters':
         return <Characters />
       case 'spells':
@@ -40,6 +44,19 @@ class App extends Component {
       currentView: view
     })
   }
+
+
+    async hpHouses() {
+      const response = await axios.get(`${House_URL}houses?/houses&key=${process.env.REACT_APP_API_KEY}`)
+      console.log(response.data)
+        this.setState({
+          houses: response.data
+        })
+    }
+
+    componentDidMount(){
+      this.hpHouses();
+    }
 
 
   render() {
