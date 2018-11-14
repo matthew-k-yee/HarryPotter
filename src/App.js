@@ -8,7 +8,9 @@ import SortingHat from './SortingHat/SortingHat.js';
 import axios from 'axios'
 import './App.css';
 
-const House_URL = 'https://www.potterapi.com/v1/'
+const BASE_URL = 'https://www.potterapi.com/v1/'
+const key = '$2a$10$yhKWuhNKTAFPc21t6zyT3.O1zpj56cJkz8SHnSHzmUnuDwGecoZBe'
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -31,7 +33,9 @@ class App extends Component {
           houses = {this.state.houses}
          />
       case 'characters':
-        return <Characters />
+        return <Characters
+          characters = {this.state.characters}
+        />
       case 'spells':
         return <Spells />
       default:
@@ -47,15 +51,23 @@ class App extends Component {
 
 
     async hpHouses() {
-      const response = await axios.get(`${House_URL}houses?/houses&key=${process.env.REACT_APP_API_KEY}`)
-      console.log(response.data)
+      const response = await axios.get(`${BASE_URL}houses?/houses&key=${key}`)
         this.setState({
           houses: response.data
         })
     }
 
+    async hpCharacters(){
+      const response = await axios.get(`${BASE_URL}characters?key=${key}`)
+      console.log(response.data)
+        this.setState({
+          characters: response.data
+        })
+    }
+
     componentDidMount(){
       this.hpHouses();
+      this.hpCharacters();
     }
 
 
