@@ -12,10 +12,10 @@ function Houses(props){
             <p>{house.founder}</p>
             <p>{house.mascot}</p>
             <p>values</p>
-            <li>{house.values[0]}</li>
-            <li>{house.values[1]}</li>
-            <li>{house.values[2]}</li>
-            <li>{house.values[3]}</li>
+            <p>{house.values[0]}</p>
+            <p>{house.values[1]}</p>
+            <p>{house.values[2]}</p>
+            <p>{house.values[3]}</p>
             <p>{house.headOfHouse}</p>
           </div>
         ))}

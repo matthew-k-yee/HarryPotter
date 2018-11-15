@@ -7,6 +7,7 @@ import Characters from './Characters/Characters.js';
 import SortingHat from './SortingHat/SortingHat.js';
 import axios from 'axios'
 import './App.css';
+const APIKEY = process.env.REACT_APP_API_KEY;
 
 const BASE_URL = 'https://www.potterapi.com/v1/'
 const key = '$2a$10$yhKWuhNKTAFPc21t6zyT3.O1zpj56cJkz8SHnSHzmUnuDwGecoZBe'
@@ -18,7 +19,6 @@ class App extends Component {
       currentView: 'Welcome',
       nameInput: '',
       houses: '',
-      characters: ''
     }
     this.setView = this.setView.bind(this)
   }
@@ -34,7 +34,7 @@ class App extends Component {
          />
       case 'characters':
         return <Characters
-          characters = {this.state.characters}
+          // characters = {this.state.characters}
         />
       case 'spells':
         return <Spells />
@@ -49,25 +49,16 @@ class App extends Component {
     })
   }
 
-
     async hpHouses() {
+      console.log(APIKEY);
       const response = await axios.get(`${BASE_URL}houses?/houses&key=${key}`)
         this.setState({
           houses: response.data
         })
     }
 
-    async hpCharacters(){
-      const response = await axios.get(`${BASE_URL}characters?key=${key}`)
-      console.log(response.data)
-        this.setState({
-          characters: response.data
-        })
-    }
-
     componentDidMount(){
       this.hpHouses();
-      this.hpCharacters();
     }
 
 

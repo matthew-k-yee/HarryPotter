@@ -3,8 +3,7 @@ import React from 'react';
 function Spells(props){
   return(
     <div>
-      <h1>Greetings</h1>
-      <h1>Young Wizards and Witches</h1>
+      <h1>AVADA KADVARA</h1>
     </div>
   )
 }

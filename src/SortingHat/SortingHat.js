@@ -21,13 +21,9 @@ const BASE_URL = 'https://www.potterapi.com/v1/sortingHat'
     })
   }
 
-  componentDidMount(){
-    this.randomHouse();
-  }
-
   render(){
     return(
-    <div>
+    <div className = 'sortinghat-div'>
       <h1>Which legendary school do you belong in</h1>
       <button type = 'submit' onClick = {this.randomHouse}>Submit</button>
       <h3>{this.state.random}</h3>
