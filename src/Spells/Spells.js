@@ -3,7 +3,12 @@ import React from 'react';
 function Spells(props){
   return(
     <div>
-      <h1>AVADA KADVARA</h1>
+      {props.spells.map(spell =>(
+        <p key={spell._id}>
+          {spell.spell}
+          {spell.effect}
+        </p>
+      ))}
     </div>
   )
 }

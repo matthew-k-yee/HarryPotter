@@ -19,6 +19,7 @@ class App extends Component {
       currentView: 'Welcome',
       nameInput: '',
       houses: '',
+      spells: ''
     }
     this.setView = this.setView.bind(this)
   }
@@ -33,11 +34,11 @@ class App extends Component {
           houses = {this.state.houses}
          />
       case 'characters':
-        return <Characters
-          // characters = {this.state.characters}
-        />
+        return <Characters/>
       case 'spells':
-        return <Spells />
+        return <Spells
+        spells = {this.state.spells}
+        />
       default:
         return <Welcome />
     }
@@ -50,15 +51,23 @@ class App extends Component {
   }
 
     async hpHouses() {
-      console.log(APIKEY);
       const response = await axios.get(`${BASE_URL}houses?/houses&key=${key}`)
         this.setState({
           houses: response.data
         })
     }
 
+    async hpSpells() {
+      const response = await axios.get(`${BASE_URL}spells/?key=${key}`)
+      console.log(response)
+        this.setState({
+          spells: response.data
+        })
+    }
+
     componentDidMount(){
       this.hpHouses();
+      this.hpSpells();
     }
 
 
