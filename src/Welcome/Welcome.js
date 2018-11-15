@@ -2,9 +2,9 @@ import React from 'react';
 
 function Spells(props){
   return(
-    <div>
-      <h1>WELCOME</h1>
-      <h1>Young Wizards and Witches</h1>
+    <div className = 'welcome'>
+      <h1 className = 'welcome-title'>WELCOME</h1>
+      <h1 className = 'welcome-body'>Young Wizards and Witches</h1>
     </div>
   )
 }
