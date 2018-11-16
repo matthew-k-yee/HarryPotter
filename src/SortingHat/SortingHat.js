@@ -23,8 +23,8 @@ const BASE_URL = 'https://www.potterapi.com/v1/sortingHat'
   render(){
     return(
     <div className = 'sortinghat-div'>
-      <h1>Which legendary school do you belong in</h1>
-      <button type = 'submit' onClick = {this.randomHouse}>Click!</button>
+      <h1 className = 'sortinghat-header'>Which legendary school do you belong in</h1>
+      <button className = 'sortinghat-button' type = 'submit' onClick = {this.randomHouse}>Click!</button>
       <h3>{this.state.random}</h3>
     </div>
   )}

@@ -59,7 +59,6 @@ class App extends Component {
 
     async hpSpells() {
       const response = await axios.get(`${BASE_URL}spells/?key=${key}`)
-      console.log(response)
         this.setState({
           spells: response.data
         })
