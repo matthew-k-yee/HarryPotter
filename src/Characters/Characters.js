@@ -56,8 +56,8 @@ class Characters extends React.Component{
   render(){
     return(
       <div>
-        <h1>HOGWARTS ALUMNUS</h1>
-        <CharacterList
+        <h1 className = 'character-title'>HOGWARTS ALUMNUS</h1>
+        <CharacterList 
           handleViewChange = {this.setView}
         />
         {this.getView()}

@@ -50,6 +50,41 @@ html{
 
 .sortinghat-header{
   font-size: 80px;
+  text-shadow: 3px -4px red;
+}
+
+.sortinghat-button{
+  font-size: 14px;
+  margin: 1em;
+  position: relative;
+  max-width: 250px;
+  min-width: 150px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 2px solid #000000;
+}
+
+.sortinghat-result{
+  font-size: 60px;
+  letter-spacing: .2em;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: no-wrap;
+  border-right: .1em solid orange;
+  animation:
+    typing 11.5s steps(70, end),
+    blinking-cursor .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 
 .welcome-title{
@@ -70,6 +105,7 @@ html{
 
 .house-title{
   font-size: 45px;
+
 }
 
 .houses-container{
@@ -77,16 +113,15 @@ html{
   flex-direction: row;
   flex-wrap: wrap;
   height: 300px;
-  width: 80%;
   justify-content: center;
   position: relative;
 }
 
 .house-content{
-  height: 680px;
+  height: 500px;
   width: 500px;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 1.0s ease;
   backface-visibility: hidden;
   color: black;
 }
@@ -97,28 +132,32 @@ html{
 
 .house-header{
   font-size: 50px;
+  letter-spacing: 10px;
+  opacity: .85;
+  color: white;
+  text-shadow: 3px -4px #FFD70F;
 }
 #Gryffindor.house-content{
   background: url('https://images.ctfassets.net/bxd3o8b291gf/49zkCzoZlekCmSq6OsycAm/da6278c1af372f18f8b6a71b226e0814/PM_House_Pages_400_x_400_px_FINAL_CREST2.png?w=550&h=550&fit=thumb&f=center&q=85');
-  background-size: 500px 400px;
+  background-size: 500px;
   background-repeat: no-repeat;
 }
 
 #Slytherin{
   background-image: url('https://images.ctfassets.net/bxd3o8b291gf/4U98maPA5aEUWcO8uOisOq/e01e17cc414b960380acbf8ace1dc1d5/PM_House_Pages_400_x_400_px_FINAL_CREST4.png?w=550&h=550&fit=thumb&f=center&q=85');
-  background-size: 500px 400px;
+  background-size: 500px ;
   background-repeat: no-repeat;
 }
 
 #Ravenclaw{
   background-image: url('https://images.ctfassets.net/bxd3o8b291gf/5pnnQ5puTuywEEW06w2gSg/91abff3d923b4785ed79e9abda07bd07/PM_House_Pages_400_x_400_px_FINAL_CREST.png?w=550&h=550&fit=thumb&f=center&q=85');
-  background-size: 500px 400px;
+  background-size: 500px ;
   background-repeat: no-repeat;
 }
 
 #Hufflepuff{
   background-image: url('https://images.ctfassets.net/bxd3o8b291gf/2GyJvxXe40kkkG0suuqUkw/e1a64ec404cf5f19afe9053b9d375230/PM_House_Pages_400_x_400_px_FINAL_CREST3.png?w=550&h=550&fit=thumb&f=center&q=85');
-  background-size: 500px 400px;
+  background-size: 500px ;
   background-repeat: no-repeat;
 }
 
@@ -126,6 +165,32 @@ html{
   font-size: 30px;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   border-radius: 50%;
+  padding-top: 10px;
+  height: 350px;
+  text-decoration: underline;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+.character-title{
+  font-size: 50px;
+}
+
+.character-buttons{
+  margin-top: 30px;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.character-buttons button{
+  font-size: 14px;
+  margin: 1em;
+  position: relative;
+  max-width: 250px;
+  min-width: 150px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 2px solid #000000;
 }

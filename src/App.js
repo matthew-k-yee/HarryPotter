@@ -31,8 +31,7 @@ class App extends Component {
         return <SortingHat/>
       case 'houses':
         return <Houses
-          houses = {this.state.houses}
-         />
+          houses = {this.state.houses}/>
       case 'characters':
         return <Characters/>
       case 'spells':

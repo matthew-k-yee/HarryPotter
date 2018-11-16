@@ -22,12 +22,15 @@ const BASE_URL = 'https://www.potterapi.com/v1/sortingHat'
 
   render(){
     return(
-    <div className = 'sortinghat-div'>
-      <h1 className = 'sortinghat-header'>Which legendary school do you belong in</h1>
-      <button className = 'sortinghat-button' type = 'submit' onClick = {this.randomHouse}>Click!</button>
-      <h3>{this.state.random}</h3>
-    </div>
-  )}
+      <div className = 'sortinghat-div'>
+        <h1 className = 'sortinghat-header'>Which legendary school do you belong in</h1>
+        <button className = 'sortinghat-button' type = 'submit' onClick = {this.randomHouse}>Found Out!</button>
+        <div className = 'sortinghat-result'>
+          <h3>TEAM {this.state.random}</h3>
+        </div>
+      </div>
+    )
+}
 }
 
 export default SortingHat;

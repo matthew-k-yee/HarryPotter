@@ -8,15 +8,15 @@ function Houses(props){
         {props.houses.map(house => (
           <div className = 'house-content' id= {house.name} key = {house._id}>
             <div className = 'house-back'>
-            <p>{house.colors[0]} & {house.colors[1]}</p>
             <p>{house.founder}</p>
-            <p>{house.mascot}</p>
-            <p>values</p>
-            <p>{house.values[0]}</p>
-            <p>{house.values[1]}</p>
-            <p>{house.values[2]}</p>
-            <p>{house.values[3]}</p>
-            <p>{house.headOfHouse}</p>
+            <p>{house.colors[0].charAt(0).toUpperCase() + house.colors[0].slice(1)} &
+              {house.colors[1].charAt(0).toUpperCase() + house.colors[1].slice(1)}</p>
+            <p>The {house.mascot.charAt(0).toUpperCase() + house.mascot.slice(1)}</p>
+            <p>{house.values[0].charAt(0).toUpperCase() + house.values[0].slice(1)},
+              {house.values[1].charAt(0).toUpperCase() + house.values[1].slice(1)},
+              {house.values[2].charAt(0).toUpperCase() + house.values[2].slice(1)},
+              {house.values[3].charAt(0).toUpperCase() + house.values[3].slice(1)}
+            </p>
             </div>
           </div>
         ))}
