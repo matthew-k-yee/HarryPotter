@@ -2,10 +2,10 @@ import React from 'react'
 
 function GryffindorStudents(props){
   return(
-    <div>
+    <div id = 'students'>
         {props.characters.filter(character => (character.house === 'Gryffindor'))
         .map((character) => (
-          <p key={character._id}>{character.name}</p>
+          <p id='students-ind' key={character._id}>{character.name}</p>
         ))
       }
     </div>

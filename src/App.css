@@ -40,6 +40,20 @@ html{
   border: 2px solid #000000;
 }
 
+.nav button:focus{
+  background-color: red;
+  outline: 0;
+
+  /* margin: 1em;
+  position: relative;
+  max-width: 250px;
+  min-width: 150px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 2px solid #000000; */
+}
+
 .nav span{
   vertical-align: middle;
 }
@@ -66,14 +80,14 @@ html{
 }
 
 .sortinghat-result{
-  font-size: 60px;
+  font-size: 45px;
   letter-spacing: .2em;
   margin: 0 auto;
   overflow: hidden;
   white-space: no-wrap;
   border-right: .1em solid orange;
   animation:
-    typing 11.5s steps(70, end),
+    typing 15.5s steps(100, end),
     blinking-cursor .5s step-end infinite;
 }
 
@@ -174,6 +188,7 @@ html{
 
 .character-title{
   font-size: 50px;
+  text-shadow: 3px -4px red;
 }
 
 .character-buttons{
@@ -193,4 +208,23 @@ html{
   letter-spacing: 2px;
   font-weight: 600;
   border: 2px solid #000000;
+}
+
+.character-buttons button:focus{
+  background-color:red;
+  outline: 0;
+}
+
+#students{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+#students-ind{
+  font-size: 30px;
+  margin-left: 50px;
 }

@@ -31,7 +31,7 @@ class Characters extends React.Component{
       case 'Slytherin':
         return <SlytherinStudents characters = {this.state.characters}/>
       default:
-        return 'CHOOSE ONE'
+        return ''
     }
   }
 
@@ -56,8 +56,8 @@ class Characters extends React.Component{
   render(){
     return(
       <div>
-        <h1 className = 'character-title'>HOGWARTS ALUMNUS</h1>
-        <CharacterList 
+        <h1 className = 'character-title'>HOGWARTS ALUMNI</h1>
+        <CharacterList className = 'character-container'
           handleViewChange = {this.setView}
         />
         {this.getView()}
