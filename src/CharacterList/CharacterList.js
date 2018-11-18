@@ -3,7 +3,7 @@ import React from 'react';
 
 function CharacterList(props){
   return(
-    <div className = 'character-buttons'>
+    <div className = 'character-buttons focus-in-contract-bck'>
       <button onClick = {() => props.handleViewChange('Hufflepuff')}>Hufflepuff</button>
       <button onClick = {() => props.handleViewChange('Gryffindor')}>Gryffindor</button>
       <button onClick = {() => props.handleViewChange('Ravenclaw')}>Ravenclaw</button>
