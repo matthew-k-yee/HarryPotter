@@ -6,7 +6,7 @@ This project is built using React and the [Harry Potter API](https://www.pottera
 This app will allow the user to look at the houses,characters, and spells within the Harry Potter Universe. User's will be able to view which Hogwarts house they are in.
 
 Wireframes:
-![alt text](/Users/Yeezus/Desktop/GA-Lessons/harrypotter-app/src/Wireframe/IMG_8492.jpg)
+![alt text](src/Wireframe/IMG_8492.jpg)
 
 Components being used
 -- Welcome
