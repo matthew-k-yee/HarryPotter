@@ -1,17 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-HARRY POTTER
+# HARRY POTTER
+[Harry Potter Website](http://defiant-alley.surge.sh/)
+This project is built using React and the [Harry Potter API](https://www.potterapi.com/)
+This app will allow the user to look at the houses,characters, and spells within the Harry Potter Universe. User's will be able to view which Hogwarts house they are in.
 
-This project is built using React and the Harry Potter API // https://www.potterapi.com/
-This app will allow the user to look at the houses and characters within Hogwarts.
-User's will be able to view which Hogwarts house they are in.
+Wireframes
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-5 Components
+Components being used
 -- Welcome
--- Sorting Hat
--- Houses
--- Characters
--- Spells
+-- Nav
+---- Sorting Hat
+---- Houses
+---- Characters
+---- CharacterList
+----- GryffindorStudents
+----- HufflepuffStudents
+----- RavenclawStudents
+----- SlytherinStudents
+---- Spells
+-- Music
 
 Tasks for Wed 11/14: Add a search bar
 Tasks for Thur 11/15: Look at spells and build game?
