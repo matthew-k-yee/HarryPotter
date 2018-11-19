@@ -35,7 +35,6 @@ class Characters extends React.Component{
     }
   }
 
-
   setView(view){
     this.setState({
       currentView: view

@@ -43,15 +43,6 @@ html{
 .nav button:focus{
   background-color: red;
   outline: 0;
-
-  /* margin: 1em;
-  position: relative;
-  max-width: 250px;
-  min-width: 150px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  border: 2px solid #000000; */
 }
 
 .nav span{
@@ -107,10 +98,11 @@ html{
   opacity: .85;
   color: white;
   text-shadow: 3px -4px #FFD70F;
+  margin-top: 50px;
 }
 
 .welcome-body{
-  font-size: 85px;
+  font-size: 45px;
   letter-spacing: 1px;
   color: white;
   opacity: .85;
@@ -227,6 +219,11 @@ html{
 #students-ind{
   font-size: 30px;
   margin-left: 50px;
+  text-align: center;
+  background: black;
+  opacity: .7;
+  border: 1px solid white;
+  padding: 5px;
 }
 
 .focus-in-contract-bck{
@@ -251,11 +248,45 @@ html{
   }
 }
 
-.text-focus-in {
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.slide-in-top {
+	  animation: slide-in-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@keyframes text-focus-in {
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.Gryffindor {
+	-webkit-animation: Gryffindor 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: Gryffindor 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes Gryffindor {
   0% {
     -webkit-filter: blur(12px);
             filter: blur(12px);
@@ -268,29 +299,12 @@ html{
   }
 }
 
-.focus-in-contract{
-  animation: focus-in-contract 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.Ravenclaw {
+	-webkit-animation: Ravenclaw 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: Ravenclaw 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-@keyframes focus-in-contract {
-  0% {
-    letter-spacing: 1em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-.tracking-in-contract-bck-bottom{
-  animation: tracking-in-contract-bck-bottom 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@keyframes tracking-in-contract-bck-bottom {
+@keyframes Ravenclaw {
   0% {
     letter-spacing: 1em;
     -webkit-transform: translateZ(400px) translateY(300px);
@@ -307,15 +321,38 @@ html{
   }
 }
 
-.tracking-in-contract-bck{
-  animation: tracking-in-contract-bck 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+.Hufflepuff {
+	-webkit-animation: Hufflepuff 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: Hufflepuff 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-@keyframes tracking-in-contract-bck {
+@keyframes Hufflepuff {
   0% {
     letter-spacing: 1em;
-    -webkit-transform: translateZ(400px);
-            transform: translateZ(400px);
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.Slytherin {
+	-webkit-animation: Slytherin 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: Slytherin 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes Slytherin {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
     opacity: 0;
   }
   40% {
@@ -326,4 +363,42 @@ html{
             transform: translateZ(0);
     opacity: 1;
   }
+}
+
+#spells{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#spell-list{
+  transform-style: preserve-3d;
+  transition: all 1.0s ease;
+  backface-visibility: hidden;
+  color: black;
+  width: 230px;
+  border-radius: 50%;
+}
+
+#spell-list:hover{
+  transform: rotateY(180deg);
+}
+
+#spells p{
+  width: 210px;
+  font-size: 40px;
+  background: white;
+  margin: 10px;
+}
+
+.spell-effect{
+  height: 100px;
+  font-size: 33px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 50%;
+  text-decoration: underline;
+  background: white;
+  padding-top: 50px;
 }

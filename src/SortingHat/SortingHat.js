@@ -30,7 +30,7 @@ const BASE_URL = 'https://www.potterapi.com/v1/sortingHat'
         </div>
       </div>
     )
-}
+  }
 }
 
 export default SortingHat;

@@ -3,8 +3,18 @@ import React from 'react';
 function Spells(props){
   return(
     <div className = 'welcome'>
-      <h1 className = 'welcome-title'>WELCOME</h1>
-      <h1 className = 'welcome-body'>Young Wizards and Witches</h1>
+      <div className = 'welcome-title slide-in-top'>
+        <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+      </div>
+      <div className = 'welcome-body'>
+        <h1>Young Wizards and Witches</h1>
+      </div>
     </div>
   )
 }

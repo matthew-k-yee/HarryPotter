@@ -6,8 +6,8 @@ import Houses from './Houses/Houses.js';
 import Characters from './Characters/Characters.js';
 import SortingHat from './SortingHat/SortingHat.js';
 import axios from 'axios'
+import Music from './Music/Music.js'
 import './App.css';
-const APIKEY = process.env.REACT_APP_API_KEY;
 
 const BASE_URL = 'https://www.potterapi.com/v1/'
 const key = '$2a$10$yhKWuhNKTAFPc21t6zyT3.O1zpj56cJkz8SHnSHzmUnuDwGecoZBe'
@@ -17,7 +17,6 @@ class App extends Component {
     super(props);
     this.state = {
       currentView: 'Welcome',
-      nameInput: '',
       houses: '',
       spells: ''
     }
@@ -49,21 +48,21 @@ class App extends Component {
     })
   }
 
-    async hpHouses() {
-      const response = await axios.get(`${BASE_URL}houses?/houses&key=${key}`)
-        this.setState({
-          houses: response.data
-        })
+  async hpHouses() {
+    const response = await axios.get(`${BASE_URL}houses?/houses&key=${key}`)
+      this.setState({
+        houses: response.data
+      })
     }
 
-    async hpSpells() {
-      const response = await axios.get(`${BASE_URL}spells/?key=${key}`)
-        this.setState({
-          spells: response.data
-        })
+  async hpSpells() {
+    const response = await axios.get(`${BASE_URL}spells/?key=${key}`)
+      this.setState({
+        spells: response.data
+      })
     }
 
-    componentDidMount(){
+  componentDidMount(){
       this.hpHouses();
       this.hpSpells();
     }
@@ -72,6 +71,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Music />
         <Nav handleViewChange = {this.setView} />
         {this.getView()}
       </div>
