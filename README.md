@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 
 # HARRY POTTER
-[Harry Potter Website](http://defiant-alley.surge.sh/)  
+[Deployed Link](http://defiant-alley.surge.sh/)  
 This project is built using React and the [Harry Potter API](https://www.potterapi.com/)  
 This app will allow the user to look at the houses,characters, and spells within the Harry Potter Universe.  
 User's will be able to view which Hogwarts house they are in.  
